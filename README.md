@@ -42,7 +42,7 @@ Create a virtual environment (optional)
 python -m venv venv
 ```
 ```bash
-source venv/bin/activate
+venv/bin/activate
 ```
 Run migrations
 ```bash
