@@ -1,16 +1,11 @@
-pip install django
 
-pip install openai
+# ChatGPT-based Chatbot using Django
 
-python manage.py runserver
-
-<!-- python manage.py migrate -->
-
-ChatGPT-based Chatbot using Django
 Introduction
-The purpose of this project is to develop a chatbot using the ChatGPT model integrated into a Django web application. The chatbot will allow users to interact with the model, generating responses based on their input. The Django framework will be employed to facilitate web development, handling user input, and displaying chat interactions.
+The purpose of this project is to develop a chatbot using the ChatGPT model integrated into a Django web application. The chatbot will allow users to interact with the model, generating responses based on their input. The Django framework will be employed to facilitate web development, handling user input, and displaying chat interactions.S
 
-Project Components
+## Project Components
+
 1. Django Setup
 The project utilizes the Django framework to structure the web application. Django provides a robust and scalable foundation for building web applications, handling routing, views, and templates.
 
@@ -29,42 +24,50 @@ A Django view, named chat_view, is responsible for handling the user's input, ma
 6. Frontend
 A simple HTML template is designed to display the chat interface. The template incorporates AJAX or Django forms to enable real-time updates as users interact with the chatbot. CSS styles can be added to enhance the visual appeal of the interface.
 
-Implementation Steps
-Django Project Setup:
+## Run Locally
 
-Install Django using pip install django.
-Create a new Django project with django-admin startproject mychatbot.
-Django App Creation:
+Clone the project
 
-Generate a new app within the project using python manage.py startapp chat.
-Install Dependencies:
+```bash
+  git clone https://github.com/tusharsingh00/chatbot_django.git
+```
 
-Install required packages such as Django, OpenAI, and any additional dependencies.
-Form Design:
+Go to the project directory
 
-Create a Django form within the 'chat' app to capture user input.
-ChatGPT Integration:
+```bash
+  cd chatbot_django
+```
+Create a virtual environment (optional)
+```bash
+python -m venv venv
+```
+```bash
+source venv/bin/activate
+```
+Run migrations
+```bash
+python manage.py migrate
+```
+Install dependencies
 
-Obtain an API key from OpenAI and integrate it into the Django app.
-Configure the app to make requests to the ChatGPT model using the OpenAI API.
-View Implementation:
+```bash
+  pip install django
+```
+```bash
+  pip install openai
+```
 
-Develop a Django view, chat_view, to handle form submissions, interact with ChatGPT, and update the chat interface.
-Frontend Design:
+Start the server
 
-Design an HTML template to display the chat interface.
-Implement AJAX or Django forms for real-time updates.
-Testing:
+```bash
+  python manage.py runserver
+```
 
-Thoroughly test the chatbot to ensure accurate responses and proper functionality.
-Deployment:
 
-Deploy the Django project on a chosen server (e.g., Heroku, AWS, DigitalOcean).
-Improvement and Expansion:
+## Acknowledgements
 
-Continuously enhance the chatbot by refining responses, adding features, and addressing user feedback.
-Conclusion
-This project successfully demonstrates the integration of the ChatGPT model into a Django web application to create a chatbot. The combination of Django's powerful web development capabilities and ChatGPT's natural language processing results in an interactive and responsive chat interface. The modular structure allows for further enhancements and customization to meet specific project requirements.
+ - [CodeWithHarry](www.youtube.com/@CodeWithHarry)
+ - [freecodecamp.org](https://www.youtube.com/@freecodecamp)
+ - [CodeWithClinton](www.youtube.com/@CodeWithClinton)
+ - [Chatgpt](https://chat.openai.com/auth/login)
 
-Future Considerations
-Potential future improvements may include implementing user sessions for conversation history, enhancing the chatbot's natural language understanding, and incorporating additional features to create a more engaging user experience. Feedback from users can be valuable for refining the model and making the chatbot more effective in addressing user queries.

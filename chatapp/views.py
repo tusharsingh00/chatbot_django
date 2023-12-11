@@ -9,14 +9,9 @@ from .models import QuestionAnswer
 import openai
 from .models import QuestionAnswer 
 from django.http import JsonResponse
-# from openai import OpenAI
 import json
 
 
-# Create your views here.
-# open_api_key = "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"
-# open_api_key = "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"
-# openai.api_key = open_api_key
 
 
 @login_required(login_url='signin')
@@ -81,46 +76,9 @@ def signout(request):
 
 
 
- 
- 
 
-
-        
-    
-# def ask_openai(message):
-#     client = OpenAI()
-#     response = client.chat.completions.create(
-#     # response = openai.chat.completions.create(
-#     # response = openai.ChatCompletion.create(
-#     # model="gpt-4",
-#     model="gpt-3.5-turbo",
-#     messages=[
-#             {"role": "system", "content": "You are a helpful assistant."},
-#             {"role": "user", "content": message},
-# #             {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
-# #             {"role": "user", "content": "Where was it played?"}
-            
-# ]
-    
-# )
-    
-#     answer = response['choices'][0]['message']['content']
-#     # answer = response.choice[0].text.strip()
-#     return answer
-
-
-# def getValue(request):
-#     data = json.loads(request.body)
-#     message = data["msg"] 
-#     response = ask_openai(message)
-#     print(response)
-#     QuestionAnswer.objects.create(user = request.user, question=message, answer=response)
-#     return JsonResponse({"msg": message, "res": response})
-#     # return JsonResponse("it is working(views.py)", safe=False)
-
-
-
-openai_api_key = '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'
+openai_api_key = 'Create your own api key'
+# openai_api_key = ''
 openai.api_key = openai_api_key
 
 def ask_openai(message):
@@ -137,25 +95,11 @@ def ask_openai(message):
     answer = response.choices[0].text.strip()
     return answer
     
-# def ask_openai(message):
-#     open_api_key = "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"
-#     openai.api_key = open_api_key
-#     # openai.api_key = 'your-api-key'  # Replace with your actual OpenAI API key
 
-#     response = openai.ChatCompletion.create(
-#         model="gpt-3.5-turbo",
-#         messages=[
-#             {"role": "system", "content": "You are a helpful assistant."},
-#             {"role": "user", "content": message},
-#         ]
-#     )
-
-#     answer = response['choices'][0]['message']['content']
-#     return answer
 
 def getValue(request):
     data = json.loads(request.body)
-    message = data.get("msg", "")  # Use get to handle missing keys gracefully
+    message = data.get("msg", "")  
 
     if message:
         response = ask_openai(message)
