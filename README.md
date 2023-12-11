@@ -6,7 +6,7 @@ The purpose of this project is to develop a chatbot using the ChatGPT model inte
 
 ## Project Components
 
-1. Django Setup
+1. Django Setup <br>
 The project utilizes the Django framework to structure the web application. Django provides a robust and scalable foundation for building web applications, handling routing, views, and templates.
 
 2. Chat App
